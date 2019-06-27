@@ -153,7 +153,7 @@ void KidPhotoViewer::chooseSrcDir()
 	m_srcDirLabel->setText(dir.path());
 	m_fileList.clear();
 
-	if (!dir.isEmpty())
+	if (!dir.exists())
 	{
 		QStringList filters;
 		filters << "*.jpg" << "*.JPG";
@@ -199,7 +199,7 @@ void KidPhotoViewer::chooseDstDir()
 	m_dstDirLabel->setText(dir.path());
 	m_fileList.clear();
 
-	if (!dir.isEmpty())
+	if (!dir.exists())
 	{
 		QStringList filters;
 		filters << "*.jpg" << "*.JPG";
